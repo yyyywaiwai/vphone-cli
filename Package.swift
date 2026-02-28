@@ -28,9 +28,6 @@ let package = Package(
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
             ],
             path: "sources/vphone-cli",
-            swiftSettings: [
-                .unsafeFlags(["-parse-as-library"]),
-            ],
             linkerSettings: [
                 .linkedFramework("Virtualization"),
                 .linkedFramework("AppKit"),
