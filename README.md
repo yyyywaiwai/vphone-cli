@@ -6,10 +6,11 @@ Boot a virtual iPhone (iOS 26) via Apple's Virtualization.framework using PCC re
 
 ## Tested Environments
 
-| Record | Host macOS | Host Hardware | iPhone IPSW | CloudOS IPSW |
-|--------|------------|---------------|-------------|--------------|
-| 1 | macOS 26.3 (Tahoe, Build 25D125) | MacBook Air, Apple M4 | `iPhone17,3_26.1_23B85_Restore.ipsw` | `PCC-CloudOS-26.1-23B85.ipsw` |
-| 2 | macOS 26.3 (Tahoe, Build 25D125) | MacBook Air, Apple M4 | `iPhone17,3_26.3_23D127_Restore.ipsw` | `PCC-CloudOS-26.1-23B85.ipsw` |
+| Host | iPhone | CloudOS |
+|------|--------|---------|
+| Mac16,12 26.3 | `17,3_26.1_23B85` | `26.1-23B85` |
+| Mac16,12 26.3 | `17,3_26.3_23D127` | `26.1-23B85` |
+| Mac16,12 26.3 | `17,3_26.3_23D127` | `26.3-23D128` |
 
 ## Prerequisites
 
@@ -103,7 +104,7 @@ Run `make help` for the full list. Key targets:
 | `vm_new` | Create VM directory |
 | `fw_prepare` | Download/merge IPSWs |
 | `fw_patch` | Patch boot chain |
-| `boot` / `boot_dfu` | Boot VM (normal / DFU) |
+| `boot` / `boot_dfu` | Boot VM (GUI / DFU headless) |
 | `restore_get_shsh` | Fetch SHSH blob |
 | `restore` | Flash firmware |
 | `ramdisk_build` | Build SSH ramdisk |
